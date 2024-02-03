@@ -1,7 +1,10 @@
 import os
 import json
 
+# Desired C++ Version
 cpp_version = '20'
+
+# Your paths here:
 compiler_path = 'C:\\msys64\\ucrt64\\bin\\g++.exe'
 debugger_path = 'C:\\msys64\\ucrt64\\bin\\gdb.exe'
 
