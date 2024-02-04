@@ -138,19 +138,21 @@ $(MAIN): $(OBJECTS)
 
 .PHONY: clean
 clean:
-#	$(RM) $(OUTPUTMAIN)
-#	$(RM) $(call FIXPATH,$(OBJECTS))
-#	$(RM) $(call FIXPATH,$(DEPS))
-#	@echo Cleanup complete!
-
+ifeq ($(OS),Windows_NT)
 	rm -f $(OUTPUTMAIN)
-
 	rm -f $(OUTPUT)/Debug/$(MAIN)
 	rm -f $(OUTPUT)/Release/$(MAIN)
-
 	rm -f $(call FIXPATH,$(OBJECTS))
 	rm -f $(call FIXPATH,$(DEPS))
 	@echo Cleanup complete!
+else
+	$(RM) $(OUTPUTMAIN)
+	$(RM) $(OUTPUT)/Debug/$(MAIN)
+	$(RM) $(OUTPUT)/Release/$(MAIN)
+	$(RM) $(call FIXPATH,$(OBJECTS))
+	$(RM) $(call FIXPATH,$(DEPS))
+	@echo Cleanup complete!
+endif	
 
 run: all
 	./$(OUTPUTMAIN)
