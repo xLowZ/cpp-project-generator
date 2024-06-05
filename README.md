@@ -1,6 +1,7 @@
 ## Sobre
 
 - Gera um template de um projeto C++ para o Visual Studio Code, pouco flexível.
+- Compilador: gcc.
 - Para melhor utilização, deverão ser feitos ajustes manuais dos parâmetros no arquivo principal.
 - Arquivo de texto adicional contém algumas informações extras após gerar o template.
 - Por padrão, executáveis terão o nome da workspace em que se encontram (mesmo nome da pasta onde se encontra o seu `cpp-project-generator.py`).
@@ -8,6 +9,7 @@
 
 ## EN:
 - Generates a template of a C++ project for Visual Studio Code, with limited flexibility.
+- Compiler: gcc.
 - For better usage, manual adjustments of parameters in the main file are required.
 - An additional text file contains some extra information after generating the template.
 - By default, executables will have the name of the workspace they are in (same name as the folder where your `cpp-project-generator.py` is located).
